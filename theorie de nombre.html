@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Theory</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .letter {
+            display: inline-block;
+            position: relative;
+            font-size: 48px;
+            --char-color: #fff; /* Default color for letters */
+            color: var(--char-color);
+        }
+
+        .letter::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .probleme {
+            background-color: #4a4a1f;
+            border: 1px solid #3a3a1f;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .enonce {
+            background-color: #6a5a2f;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <span class="letter" style="--char-color: #ff4a4a;">N</span>
+        <span class="letter" style="--char-color: #4aff73;">u</span>
+        <span class="letter" style="--char-color: #4a4aff;">m</span>
+        <span class="letter" style="--char-color: #ffcc4a;">b</span>
+        <span class="letter" style="--char-color: #4affff;">e</span>
+        <span class="letter" style="--char-color: #ff4aff;">r</span>
+        <span class="letter" style="--char-color: #73ff4a;"> </span>
+        <span class="letter" style="--char-color: #4a73ff;">T</span>
+        <span class="letter" style="--char-color: #ff4a73;">h</span>
+        <span class="letter" style="--char-color: #4affcc;">e</span>
+        <span class="letter" style="--char-color: #cc4aff;">o</span>
+        <span class="letter" style="--char-color: #4accff;">r</span>
+        <span class="letter" style="--char-color: #4a4a4a;">y</span>
+    </div>
+
+    <div class="container">
+        <div class="probleme">
+            <div class="enonce">
+                Show that the fraction \( \frac{21n + 4}{14n + 3} \) is irreducible for all \( n \in \mathbb{N} \).
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Prove the divisibility criterion by 17: The number \( \overline{a_n a_{n-1} \ldots a_1 a_0} \) is divisible by 17 if and only if the number \( \overline{a_n a_{n-1} \ldots a_1} - 5a_0 \) is divisible by 17.
+                <br>
+                Note: This criterion can be used iteratively on smaller numbers. For example: \( 82858 \rightarrow 8285 - 5 \cdot 8 = 8245 \rightarrow 824 - 5 \cdot 5 = 799 \rightarrow 79 - 5 \cdot 9 = 34 \). Since 34 is divisible by 17, the criterion confirms that 82858 is also divisible by 17.
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Prove that if \( p \) and \( p^2 + 8 \) are primes, then \( p^3 + 8p + 2 \) is also prime.
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                How many natural numbers that are multiples of 15 have exactly 15 positive divisors?
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Find all pairs of integers \( (x, y) \) satisfying the equation \( x^4 - y^2 = 17 \).
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Show that if a prime number \( p \) is divided by 30, then the remainder is either 1 or a prime number. Is the same true when the divisor is 60 or 90?
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Let \( m \) and \( n \) be non-zero natural numbers such that \( mn + 1 \) is divisible by 24. Show that \( m + n \) is also divisible by 24.
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Let \( a \) and \( b \) be distinct natural numbers. Show that there are infinitely many natural numbers \( s \) such that \( a + s \) and \( b + s \) are coprime.
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Give an example of a composite number whose decimal representation contains exactly 1994 digits "1" and one "7" (and no other digits).
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Show that there exist no \( x, y \in \mathbb{Q} \) such that \( x^2 + y^2 = 3 \).
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Let \( n \in \mathbb{N}_0 \). Show that if \( 2^n - 1 \) is prime, then \( n \) is prime. Show that if \( 2^n + 1 \) is prime, then \( n \) is a power of 2.
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                For every positive integer \( n \), find the remainder when \( \frac{(7n)!}{7^n \cdot n!} \) is divided by 7.
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Find the smallest positive integer \( a \) such that 1971 divides \( 50^n + a \cdot 23^n \) for every odd \( n \).
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Determine the greatest common divisor of all numbers of the form \( p^8 - 1 \), where \( p \) is a prime greater than 5.
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Find the number of pairs of positive integers \( x, y \) with \( x \leq y \) such that \( \gcd(x, y) = 5! \) and \( \mathrm{lcm}(x, y) = 50! \).
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Prove Wilson's theorem: A number \( p \geq 2 \) is prime if and only if \( (p - 1)! \equiv -1 \mod p \).
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Find two positive integers \( a \) and \( b \) such that \( (a + b)^7 - a^7 - b^7 \) is divisible by 77 but \( ab(a + b) \) is not divisible by 7.
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Find all right triangles where the hypotenuse has an integer length and the other two sides have lengths that are perfect squares.
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                If \( p \) and \( q \) are prime numbers, and \( x \in \mathbb{Z} \) such that \( q \mid (x^{p-1} + x^{p-2} + \ldots + x + 1) \), then show that \( p = q \) or \( p \) divides \( q - 1 \).
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Determine all positive integers \( n \) such that \( 2^n - 1 \cdot n + 1 \) is a perfect square.
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Show that there are infinitely many non-zero natural numbers \( n \) such that the number \( 1^2 + 2^2 + \ldots + n^2 / n \) is a perfect square. Clearly, \( 1 \) is the smallest number with this property. Find the next two smallest numbers with this property.
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Call an integer \( n \) faithful if there exist positive integers \( a < b < c \) such that \( a \) divides \( b \), \( b \) divides \( c \), and \( n = a + b + c \). Find all unfaithful numbers.
+            </div>
+        </div>
+        <div class="probleme">
+            <div class="enonce">
+                Let \( p_1, p_2, \ldots, p_n \) be distinct prime numbers greater than 3. Show that \( 2p_1p_2\ldots p_n + 1 \) has at least \( 4n \) divisors.
+            </div>
+        </div>
+    </div>
+    <button><a href="contact form.html">Submit your solutions</a></button>
+</body>
+</html>

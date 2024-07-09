@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Problems</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        .probleme {
+            background-color: #4a4a1f;
+            border: 1px solid #3a3a1f;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .enonce {
+            background-color: #6a5a2f;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .title {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .letter {
+            display: inline-block;
+            position: relative;
+            font-size: 48px;
+            --char-color: #fff; /* Default color for letters */
+            color: var(--char-color);
+        }
+        button{
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <span class="letter" style="--char-color: #ff4a4a;">C</span>
+        <span class="letter" style="--char-color: #4aff73;">o</span>
+        <span class="letter" style="--char-color: #4aff73;">m</span>
+        <span class="letter" style="--char-color: #4a4aff;">b</span>
+        <span class="letter" style="--char-color: #ffcc4a;">i</span>
+        <span class="letter" style="--char-color: #4affff;">n</span>
+        <span class="letter" style="--char-color: #73ff4a;">a</span>
+        <span class="letter" style="--char-color: #ff4aff;">t</span>
+        <span class="letter" style="--char-color: #4affff;">o</span>
+        <span class="letter" style="--char-color: #ff7d4a;">i</span>
+        <span class="letter" style="--char-color: #3fc43f;">r</span>
+        <span class="letter" style="--char-color: #6b4aff;">e</span>
+    </div>
+    <div class="container">
+        <div class="probleme">
+            <div class="enonce">
+                Seven dwarfs are sitting around a round table. Each has a glass in front of him. Some glasses contain milk, totaling 3 liters altogether. One of the dwarfs evenly shares his milk with the other six without keeping any for himself. Moving clockwise around the table, each subsequent dwarf does the same. After the seventh dwarf has shared his milk, the contents of the glasses are the same as initially. Determine how much milk each dwarf originally had.
+            </div>
+        </div>
+        
+        <div class="probleme">
+            <div class="enonce">
+                Let \( A \) be a subset of \( \mathbb{N}^* \) such that for all \( x, y \in A \) with \( x \neq y \), we have \( |x - y| \geq xy / 25 \). Show that \( |A| \leq 9 \). Provide an example of such a set.
+            </div>
+        </div>
+        
+        <div class="probleme">
+            <div class="enonce">
+                In a math competition, there are \( n \geq 4 \) problems. Each problem has been solved by exactly four students. For two problems, exactly one student has solved both. Assume there are at least \( 4n \) students participating in the competition. Determine the minimum value of \( n \) such that there is always a student who has solved all the problems.
+            </div>
+        </div>
+        
+        <div class="probleme">
+            <div class="enonce">
+                Let \( X \) be a finite set, and \( A_1, A_2, \ldots, A_m \) be subsets of \( X \) with \( |A_i| = r \) for \( 1 \leq i \leq m \). Suppose that for all \( i \neq j \), \( |A_i \cap A_j| \leq k \). Show that \( |X| \geq \frac{mr^2}{r + (m - 1)k} \).
+            </div>
+        </div>
+        
+        <div class="probleme">
+            <div class="enonce">
+                \( n \) football teams participate in a tournament where each team plays against every other team exactly once. The winner of each match gets three points, the loser gets 0 points, and both teams get one point each in case of a draw. After the tournament, the team third from the last has a score strictly less than any team above it and strictly more than the two teams below it. It also has strictly more wins than the teams above it and strictly fewer wins than the two teams below it. Determine the minimum value of \( n \).
+            </div>
+        </div>
+        
+        <div class="probleme">
+            <div class="enonce">
+                A math competition consists of 30 multiple-choice questions. The score \( s \) of a participant is calculated by the formula: \( s = 30 + 4c - m \) where \( c \) is the number of correct answers and \( m \) is the number of incorrect answers. Participants are not penalized for unanswered questions. Lisa informed Christian that her score, which was over 80, allowed him to determine the number of questions she answered correctly. If Lisa's score had been lower but still over 80, Christian would not have been able to determine it. What was Lisa's score?
+            </div>
+        </div>
+        
+        <div class="probleme">
+            <div class="enonce">
+                At an international conference, there are exactly 50 participants who speak English, exactly 50 who speak French, and exactly 50 who speak Spanish. Some participants can speak more than one of these languages. Show that there exists a partition of the participants into 5 groups such that each group contains exactly 10 English speakers, 10 French speakers, and 10 Spanish speakers.
+            </div>
+        </div>
+        
+        <div class="probleme">
+            <div class="enonce">
+                Let \( A_1, A_2, \ldots, A_n \) be finite sets. Show that if \( \sum_{1 \leq i < j \leq n} \frac{|A_i \cap A_j|}{|A_i| \cdot |A_j|} < 1 \), then there exist \( a_i \in A_i \) for \( i = 1, 2, \ldots, n \) such that \( a_i \neq a_j \) if \( i \neq j \).
+            </div>
+        </div>
+        
+        <div class="probleme">
+            <div class="enonce">
+                There are 20 girls and 20 boys sitting face to face around two concentric circles (see figure below). Exactly 20 people are sitting on each circle, but the number of boys and girls on each circle is unknown. If a boy \( g \) and a girl \( f \) are sitting face to face (one on each circle and directly facing each other), then \( (f, g) \) forms a partner pair. Show that it is possible to rotate the inner circle in such a way that the number of partner pairs is at least 10.
+            </div>
+        </div>
+        
+        <div class="probleme">
+            <div class="enonce">
+                Initially, each of the six boxes \( B1, B2, B3, B4, B5, B6 \) contains one token. Two types of operations are possible:
+                <ul>
+                    <li>Type 1: Choose a non-empty box \( B_j \) with \( 1 \leq j \leq 5 \); remove one token from box \( B_j \) and add two tokens to box \( B_{j+1} \).</li>
+                    <li>Type 2: Choose a non-empty box \( B_k \) with \( 1 \leq k \leq 4 \); remove one token from box \( B_k \) and swap the contents (potentially empty) of boxes \( B_{k+1} \) and \( B_{k+2} \).</li>
+                </ul>
+                Is it possible, after a finite number of such operations, for boxes \(
+                    B1, B2, B3, B4, B5 \) to be empty and box \( B6 \) to contain exactly \( 2010^{2010^{2010}} \) tokens?
+                </div>
+            </div>
+        </div>
+        <button><a href="contact-form.html">Submit your solutions</a></button>
+    </body>
+    </html>
+    

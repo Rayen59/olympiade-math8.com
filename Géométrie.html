@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><span style="color: #4aa3df;">C</span><span style="color: #6a5a2f;">o</span><span style="color: #4a4a1f;">m</span><span style="color: #4aa3df;">p</span><span style="color: #6a5a2f;">l</span><span style="color: #4a4a1f;">e</span><span style="color: #4aa3df;">x</span><span style="color: #6a5a2f;"> </span><span style="color: #4a4a1f;">G</span><span style="color: #4aa3df;">e</span><span style="color: #6a5a2f;">o</span><span style="color: #4a4a1f;">m</span><span style="color: #4aa3df;">e</span><span style="color: #6a5a2f;">t</span><span style="color: #4a4a1f;">r</span><span style="color: #4aa3df;">y</span></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        .problem {
+            background-color: #4a4a1f;
+            border: 1px solid #3a3a1f;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .statement {
+            background-color: #6a5a2f;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #4aa3df;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .trapezoid {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: 50px;
+            background-color: #4aa3df;
+            transform: skew(-20deg);
+            z-index: 1000;
+        }
+        .title {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .letter {
+            display: inline-block;
+            position: relative;
+            font-size: 48px;
+            --char-color: #fff; /* Default color of letters */
+            color: var(--char-color);
+        }
+        button{
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <span class="letter" style="--char-color: #ff4a4a;">C</span>
+        <span class="letter" style="--char-color: #4aff73;">o</span>
+        <span class="letter" style="--char-color: #4aff73;">m</span>
+        <span class="letter" style="--char-color: #4a4aff;">p</span>
+        <span class="letter" style="--char-color: #ffcc4a;">l</span>
+        <span class="letter" style="--char-color: #4affff;">e</span>
+        <span class="letter" style="--char-color: #ff4aff;">x</span>
+        <span class="letter" style="--char-color: #4affff;"> </span>
+        <span class="letter" style="--char-color: #4a4a1f;">G</span>
+        <span class="letter" style="--char-color: #4aa3df;">e</span>
+        <span class="letter" style="--char-color: #6a5a2f;">o</span>
+        <span class="letter" style="--char-color: #4a4a1f;">m</span>
+        <span class="letter" style="--char-color: #4aa3df;">e</span>
+        <span class="letter" style="--char-color: #6a5a2f;">t</span>
+        <span class="letter" style="--char-color: #4a4a1f;">r</span>
+        <span class="letter" style="--char-color: #4aa3df;">y</span>
+    </div>
+    <div class="container">
+        <div class="trapezoid"></div>
+        <div class="problem">
+            <div class="statement">
+                Let ABC be a triangle such that \( AB \neq AC \) and \( \angle BAC \neq 90^\circ \). Let M and N be the midpoints of segments [AB] and [AC], respectively. Let E and F be the feet of the altitudes from vertices B and C, respectively. Let O be the center of the circumcircle of triangle ABC and let H be the orthocenter of triangle ABC. The tangent to the circumcircle of triangle ABC at A intersects line (MN) at point P. Let Q be the second point of intersection of the circumcircles of triangles ABC and AEF. Lines (EF) and (AQ) intersect at point R. Show that lines (OH) and (PR) are perpendicular.
+            </div>
+        </div>
+        <div class="problem">
+            <div class="statement">
+                Let ABC be a triangle, and let E and F be the feet of the altitudes from vertices B and C, respectively. Let P be the intersection point of the altitude from vertex A with the circumcircle of triangle ABC. Line (PE) intersects the circumcircle of triangle ABC at point Q. Show that line (BQ) intersects segment [EF] at its midpoint.
+            </div>
+        </div>
+        <div class="problem">
+            <div class="statement">
+                Let ABC be a triangle, I the center of its inscribed circle, and \( \Gamma \) its circumcircle. Let M be the midpoint of segment [BC]. Let D be the orthogonal projection of point I onto segment [BC]. The perpendicular to line (AI) passing through point I intersects segment [AB] at point E and segment [AC] at point F. Let X be the second point of intersection of the circumcircles of triangles ABC and AEF. Show that lines (XD) and (AM) intersect on the circle \( \Gamma \).
+            </div>
+        </div>
+        <div class="problem">
+            <div class="statement">
+                Let ABC be an isosceles triangle with vertex at A. Let I be the center of its inscribed circle. Line (BI) intersects line (AC) at point D, and the line perpendicular to line (AC) passing through D intersects line (AI) at point E. Show that the symmetrical point of I with respect to line (AC) belongs to the circumcircle of triangle BDE.
+            </div>
+        </div>
+        <div class="problem">
+            <div class="statement">
+                Let ABC be a triangle with \( \angle CAB > \angle ABC \). Let I be the center of its inscribed circle. Let D be a point on segment [BC] such that \( \angle CAD = \angle CBA \). Let \( \omega \) be the circle tangent to segment [AC] at point A and passing through point I. Let X be the second point of intersection of circle \( \omega \) with the circumcircle of triangle ABC. Show that the angle bisectors of \( \angle DAB \) and \( \angle CXB \) intersect on segment [BC].
+            </div>
+        </div>
+        <div class="problem">
+            <div class="statement">
+                Let ABC be an acute-angled triangle, and let O be the center of its circumcircle. Let D, E, and F be the midpoints of sides [BC], [CA], and [AB], respectively. Let M be a point distinct from point D on segment [BC]. Let N be the intersection point of lines (EF) and (AM). The line (ON) intersects the circumcircle of triangle ODM at point P. Show that the symmetrical point of M with respect to line (DP) belongs to the Euler's circle of triangle ABC.
+            </div>
+        </div>
+        <div class="problem">
+            <div class="statement">
+                Let ABC be a triangle and \( \Omega \) its circumcircle. Consider a circle \( \omega \) internally tangent to circle \( \Omega \) at point A. Let P and Q be the intersection points (distinct from point A) of circle \( \omega \) with sides [AB] and [AC], respectively. Let O be the intersection point of lines (BQ) and (CP). Let A₀ be the symmetrical point of A with respect to line (BC), and let S be the intersection point of line (OA₀) with circle \( \omega \) such that point S lies on the arc PQ not containing point A. Show that the circumcircle of triangle BSC is tangent to circle \( \omega \).
+            </div>
+        </div>
+        <div class="problem">
+            <div class="statement">
+                Let ABC be an acute-angled triangle such that \( AB < AC \). Let D, E, and F be the respective points of contact of the inscribed circle of triangle ABC with sides [BC], [CA], and [AB]. The line perpendicular to segment [EF] passing through point D intersects segment [AB] at point G. The circumcircle of triangle AEF intersects the circumcircle of triangle ABC at point X. Show that points X, G, D, and B are concyclic.
+            </div>
+        </div>
+        <div class="problem">
+            <div class="statement">
+                Let ABC be an acute-angled triangle. Let D, E, and F be the feet of the altitudes from vertices A, B, and C, respectively. Let I₁ and I₂ be the centers of the circles inscribed in triangles AEF and BDF, respectively. Let O₁ and O₂ be the centers of the circumcircles of triangles ACI₁ and BCI₂, respectively. Show that lines (O₁O₂) and (I₁I₂) are parallel.
+            </div>
+        </div>
+    </div>
+    <button><a href="contact_form.html">Submit your solutions</a></button>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Menu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s ease; /* Transition for background color change */
+        }
+
+        .menu {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #1e1e1e; /* Dark background */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            color: #fff; /* White text */
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            border-bottom: 1px solid #333; /* Darker grey */
+        }
+
+        .menu .group-title {
+            background-color: #333; /* Darker grey */
+            color: #fff;
+            padding: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            padding: 15px;
+            background-color: #444; /* Dark grey */
+            transition: background-color 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #666; /* Darker grey on hover */
+        }
+
+        .settings-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #444;
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .settings-btn:hover {
+            background-color: #666; /* Darker grey on hover */
+            transform: scale(1.1); /* Scale effect on hover */
+        }
+
+        .options-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            width: 200px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .options-menu.active {
+            display: block;
+        }
+
+        .color-option {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .color-option:hover {
+            background-color: #f0f0f0;
+        }
+
+        .send-alert-btn {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .send-alert-btn:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <button class="settings-btn" onclick="toggleOptionsMenu()">⚙️</button>
+
+    <div class="options-menu" id="optionsMenu">
+        <div class="color-option" style="background-color: #00f;" onclick="changeBackgroundColor('#00f')">Blue</div>
+        <div class="color-option" style="background-color: #0f0;" onclick="changeBackgroundColor('#0f0')">Green</div>
+        <div class="color-option" style="background-color: #f00;" onclick="changeBackgroundColor('#f00')">Red</div>
+        <div class="color-option" style="background-color: #fff; color: #000;" onclick="changeBackgroundColor('#fff')">White</div>
+        <button class="send-alert-btn" onclick="sendAlert()">Send Alert</button>
+        <p style="font-size: 12px; color: #666; margin-top: 10px;">Version 2.0</p>
+    </div>
+
+    <nav class="menu">
+        <ul>
+            <li class="group">
+                <div class="group-title">Group 1</div>
+                <ul>
+                    <li><a href="contact.html">About Us</a></li>
+                    <li><a href="theorie de nombre.html">Number Theory</a></li>
+                </ul>
+            </li>
+            <li class="group">
+                <div class="group-title">Group 2</div>
+                <ul>
+                    <li><a href="Géométrie.html">Geometry</a></li>
+                    <li><a href="Combinatoire.html">Combinatorics</a></li>
+                </ul>
+            </li>
+            <li class="group">
+                <div class="group-title">Group 3</div>
+                <ul>
+                    <li><a href="Equation fonctionnel.html">Functional Equation</a></li>
+                    <li><a href="Signaler un probléme.html">Privacy rule</a></li>
+                </ul>
+            </li>
+            <li class="group">
+                <div class="group-title">Group 4</div>
+                <ul>
+                    <li><a href="formulaire de contact.html">Contact Us</a></li>
+                    <li><a href="naviguer.html">Sharing Platform(only you you can see your publications)</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleOptionsMenu() {
+            var optionsMenu = document.getElementById('optionsMenu');
+            optionsMenu.classList.toggle('active');
+        }
+
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        function sendAlert() {
+            var emailAddress = 'matholympiad40@gmail.com';
+            var subject = encodeURIComponent('Send alert for upcoming competitions');
+            var mailtoLink = 'mailto:' + emailAddress + '?subject=' + subject;
+            window.location.href = mailtoLink;
+        }
+    </script>
+</body>
+</html>
